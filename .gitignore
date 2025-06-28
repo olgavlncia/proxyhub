@@ -1,0 +1,15 @@
+# Folder cache/output mentah
+__pycache__/
+*.pyc
+
+# Data scraping langsung dari sumber
+raw_*.txt
+
+# Optional log
+*.log
+
+# Env/IDE
+.env
+.venv/
+.idea/
+.vscode/
