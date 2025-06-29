@@ -46,7 +46,10 @@
 ## 📊 Dashboard Realtime
 
 <!-- PROXY_STATS_START -->
-(akan diupdate otomatis)
+🔹 HTTP: 41205
+🔸 SOCKS4: 2862
+🔸 SOCKS5: 48
+📦 Total: 44115
 <!-- PROXY_STATS_END -->
 
 ---
