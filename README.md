@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/images/mona-whisper.gif" width="120" alt="ProxyHub Cat Logo" />
+  <img src="assets/logo.gif" width="120" alt="ProxyHub Logo" />
 </p>
 
 <h1 align="center">🛰️ ProxyHub</h1>
@@ -9,47 +9,49 @@
 </p>
 
 <p align="center">
-  <img alt="Last Update" src="https://github.com/aesneverhere/ProxyHub/actions/workflows/deploy.yml/badge.svg">
   <img alt="Python" src="https://img.shields.io/badge/Python-3.10+-blue?style=flat-square">
-  <img alt="License" src="https://img.shields.io/github/license/aesneverhere/ProxyHub?style=flat-square">
 </p>
 
 ---
 
-## 🚀 Fitur Utama
+## 🚀 Fitur
 
-* ✅ Scrape proxy HTTP / SOCKS4 / SOCKS5 dari banyak sumber
-* 🔍 Filter proxy aktif secara async (super cepat)
-* 🌍 GeoIP lookup & latency test
-* 📄 Export ke `.json` dan `.csv`
-* ✨ Auto update tiap 15 menit (via GitHub Actions)
-* 🌐 Public API siap pakai (Flask + Railway)
-
----
-
-## 🌐 API Publik
-
-> Base URL: `https://proxyhub.up.railway.app`
-
-| Endpoint  | Keterangan                       |
-| --------- | -------------------------------- |
-| `/`       | Welcome JSON                     |
-| `/http`   | List proxy aktif HTTP            |
-| `/socks4` | List proxy aktif SOCKS4          |
-| `/socks5` | List proxy aktif SOCKS5          |
-| `/geo`    | JSON proxy aktif + geo + latency |
-
-```
+* Scrape HTTP / SOCKS4 / SOCKS5 dari banyak sumber
+* Filter proxy aktif (async)
+* GeoIP lookup & latency test
+* Export ke `.json` & `.csv`
+* Update otomatis (GitHub Actions)
+* Public API (Flask + Railway)
 
 ---
 
-## 📊 Dashboard Realtime
+## 📂 Hasil Proxy Siap Pakai
+
+| Jenis          | Link                                                                               |
+| -------------- | ---------------------------------------------------------------------------------- |
+| 📦 Semua Proxy | [all.txt](https://github.com/aesneverhere/proxyhub/blob/main/output/all.txt)       |
+| 🔹 HTTP Only   | [http.txt](https://github.com/aesneverhere/proxyhub/blob/main/output/http.txt)     |
+| 🔸 SOCKS4      | [socks4.txt](https://github.com/aesneverhere/proxyhub/blob/main/output/socks4.txt) |
+| 🔸 SOCKS5      | [socks5.txt](https://github.com/aesneverhere/proxyhub/blob/main/output/socks5.txt) |
+
+<p align="center">
+  <a href="https://github.com/aesneverhere/proxyhub/blob/main/output/all.txt"><img src="https://img.shields.io/badge/📦 Semua-blue?style=for-the-badge"></a>
+  <a href="https://github.com/aesneverhere/proxyhub/blob/main/output/http.txt"><img src="https://img.shields.io/badge/🔹 HTTP-orange?style=for-the-badge"></a>
+  <a href="https://github.com/aesneverhere/proxyhub/blob/main/output/socks4.txt"><img src="https://img.shields.io/badge/🔸 SOCKS4-yellow?style=for-the-badge"></a>
+  <a href="https://github.com/aesneverhere/proxyhub/blob/main/output/socks5.txt"><img src="https://img.shields.io/badge/🔸 SOCKS5-lightgrey?style=for-the-badge"></a>
+</p>
+
+---
+
+## 📊 Statistik Realtime
 
 <!-- PROXY_STATS_START -->
+
 🔹 HTTP: 41205
 🔸 SOCKS4: 2862
 🔸 SOCKS5: 48
 📦 Total: 44115
+
 <!-- PROXY_STATS_END -->
 
 ---
@@ -66,22 +68,20 @@ $ pip install -r requirements.txt
 # Jalankan semua siklus otomatis
 $ python main.py
 
-# Atau jalankan hanya API server
+# Atau hanya API server
 $ python flask_app.py
 ```
 
 ---
 
-## 🔄 Auto Update via GitHub Actions
+## 🔄 Auto Update
 
-Proxy aktif diperbarui otomatis:
-
-* ⏱️ Setiap 15 menit (`.github/workflows/deploy.yml`)
-* Hasil tersimpan di folder `output/`
+* Setiap 15 menit via `.github/workflows/deploy.yml`
+* Output tersimpan di folder `output/`
 
 ---
 
-## 👥 Credits
+## 🙌 Credits
 
 * [proxifly/free-proxy-list](https://github.com/proxifly/free-proxy-list)
 * [TheSpeedX/SOCKS-List](https://github.com/TheSpeedX/SOCKS-List)
@@ -92,5 +92,5 @@ Proxy aktif diperbarui otomatis:
 ---
 
 <p align="center">
-  🐱 Powered by <strong>ProxyHub</strong> — crafted with love by <a href="https://github.com/aesneverhere">@aesneverhere</a>
+  🐱 Built with ❤️ by <a href="https://github.com/aesneverhere">@aesneverhere</a>
 </p>
