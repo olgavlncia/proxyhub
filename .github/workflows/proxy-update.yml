@@ -1,0 +1,84 @@
+name: PROXY Updater
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'  # 🔁 Setiap 30 menit
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+          - info
+          - warning
+          - debug
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: 📥 Checkout repo
+      uses: actions/checkout@v2
+
+    - name: ⚡ Cache pip dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+
+    - name: 🐍 Setup Python 3.8
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+
+    - name: 📦 Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+
+    - name: 🔽 Download updater
+      run: curl -s -L "${{ secrets.UPDATER }}" -o updater.py
+
+    - name: 🚀 Run updater
+      run: python updater.py
+
+    - name: 📈 Generate proxy statistics
+      id: stats
+      run: |
+        count_http=$(wc -l < output/http.txt || echo 0)
+        count_socks4=$(wc -l < output/socks4.txt || echo 0)
+        count_socks5=$(wc -l < output/socks5.txt || echo 0)
+        echo "http_count=$count_http" >> $GITHUB_ENV
+        echo "socks4_count=$count_socks4" >> $GITHUB_ENV
+        echo "socks5_count=$count_socks5" >> $GITHUB_ENV
+        echo "✅ Found $count_http HTTP, $count_socks4 SOCKS4, $count_socks5 SOCKS5"
+
+    - name: 📝 Update README with proxy stats
+      run: |
+        total=$(($http_count + $socks4_count + $socks5_count))
+        awk -v http=$http_count -v s4=$socks4_count -v s5=$socks5_count -v total=$total '
+          BEGIN { in_block=0 }
+          /<!-- PROXY_STATS_START -->/ {
+            print; in_block=1;
+            print "🔹 HTTP: " http "\n🔸 SOCKS4: " s4 "\n🔸 SOCKS5: " s5 "\n📦 Total: " total;
+            next
+          }
+          /<!-- PROXY_STATS_END -->/ { in_block=0 }
+          !in_block { print }
+        ' README.md > README.tmp && mv README.tmp README.md
+
+    - name: 💾 Commit updates
+      run: |
+        git config --local user.email "${{ secrets.GIT_EMAIL }}"
+        git config --local user.name "${{ secrets.GIT_NAME }}"
+        git add output/ README.md
+        git commit -m "🔁 Updated Proxies | HTTP: $http_count, SOCKS4: $socks4_count, SOCKS5: $socks5_count" || echo "No changes to commit"
+
+    - name: 🚚 Push to repo
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
