@@ -1,4 +1,5 @@
 import requests
+import os
 
 SOURCES = {
     "http": [
@@ -15,31 +16,38 @@ SOURCES = {
     ]
 }
 
+OUTPUT_DIR = "output"
+
 def fetch_proxies():
     all_proxies = {"http": [], "socks4": [], "socks5": []}
     for proto, urls in SOURCES.items():
         for url in urls:
             try:
+                print(f"📥 Fetching {proto.upper()} from {url}")
                 res = requests.get(url, timeout=10)
                 res.raise_for_status()
                 proxies = [line.strip() for line in res.text.splitlines() if line.strip()]
                 all_proxies[proto].extend(proxies)
-                print(f"[+] {len(proxies)} {proto} proxies from {url}")
+                print(f"✅ {len(proxies)} proxies fetched.")
             except Exception as e:
-                print(f"[!] Failed to fetch from {url}: {e}")
+                print(f"⚠️ Failed to fetch from {url}: {e}")
     return all_proxies
 
 def save_proxies(proxies):
-    with open("output/http.txt", "w") as f:
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+    with open(f"{OUTPUT_DIR}/http.txt", "w") as f:
         f.write("\n".join(proxies["http"]))
-    with open("output/socks4.txt", "w") as f:
+    with open(f"{OUTPUT_DIR}/socks4.txt", "w") as f:
         f.write("\n".join(proxies["socks4"]))
-    with open("output/socks5.txt", "w") as f:
+    with open(f"{OUTPUT_DIR}/socks5.txt", "w") as f:
         f.write("\n".join(proxies["socks5"]))
-    with open("output/all.txt", "w") as f:
-        all_ = proxies["http"] + proxies["socks4"] + proxies["socks5"]
-        f.write("\n".join(all_))
-    print("[✅] Proxies saved to output folder.")
+
+    with open(f"{OUTPUT_DIR}/all.txt", "w") as f:
+        combined = proxies["http"] + proxies["socks4"] + proxies["socks5"]
+        f.write("\n".join(combined))
+
+    print("📦 [DONE] Proxies saved to output folder.")
 
 if __name__ == "__main__":
     proxies = fetch_proxies()
