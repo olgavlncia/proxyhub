@@ -39,28 +39,15 @@
 | `/socks5` | List proxy aktif SOCKS5          |
 | `/geo`    | JSON proxy aktif + geo + latency |
 
-Contoh hasil `/geo`:
-
-```json
-[
-  {
-    "ip": "45.12.xx.xx",
-    "type": "http",
-    "country": "Germany",
-    "isp": "Some ISP",
-    "latency_ms": 401,
-    "proxy": "45.12.xx.xx:8080"
-  }
-]
 ```
 
 ---
 
 ## 📊 Dashboard Realtime
 
-* 🔗 [Live HTTP Proxy](https://proxyhub.up.railway.app/http)
-* 🔗 [Live SOCKS5 Proxy](https://proxyhub.up.railway.app/socks5)
-* 🔗 [Live GEO (JSON)](https://proxyhub.up.railway.app/geo)
+<!-- PROXY_STATS_START -->
+(akan diupdate otomatis)
+<!-- PROXY_STATS_END -->
 
 ---
 
