@@ -2,18 +2,8 @@ name: PROXY Updater
 
 on:
   schedule:
-    - cron: '*/3 * * * *'
+    - cron: '*/10 * * * *'
   workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Log level'
-        required: true
-        default: 'warning'
-        type: choice
-        options:
-          - info
-          - warning
-          - debug
 
 jobs:
   build:
@@ -57,14 +47,15 @@ jobs:
         echo "socks5_count=$count_socks5" >> $GITHUB_ENV
         echo "✅ Found $count_http HTTP, $count_socks4 SOCKS4, $count_socks5 SOCKS5"
 
-    - name: 📝 Update README with proxy stats
+    - name: 📝 Update README with proxy stats + timestamp
       run: |
         total=$(($http_count + $socks4_count + $socks5_count))
-        awk -v http=$http_count -v s4=$socks4_count -v s5=$socks5_count -v total=$total '
+        timestamp=$(TZ='Asia/Jakarta' date '+%Y-%m-%d %H:%M WIB')
+        awk -v http=$http_count -v s4=$socks4_count -v s5=$socks5_count -v total=$total -v time="$timestamp" '
           BEGIN { in_block=0 }
           /<!-- PROXY_STATS_START -->/ {
             print; in_block=1;
-            print "🔹 HTTP: " http "\n🔸 SOCKS4: " s4 "\n🔸 SOCKS5: " s5 "\n📦 Total: " total;
+            print "🔹 HTTP: " http "\n🔸 SOCKS4: " s4 "\n🔸 SOCKS5: " s5 "\n📦 Total: " total "\n🕓 Last Updated: " time;
             next
           }
           /<!-- PROXY_STATS_END -->/ { in_block=0 }
