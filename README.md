@@ -9,7 +9,11 @@
 </p>
 
 <p align="center">
+  <img alt="Last Update" src="https://github.com/aesneverhere/ProxyHub/actions/workflows/proxy-update.yml/badge.svg">
   <img alt="Python" src="https://img.shields.io/badge/Python-3.10+-blue?style=flat-square">
+  <img alt="Flask" src="https://img.shields.io/badge/Flask-API-lightgrey?style=flat-square">
+  <img alt="Asyncio" src="https://img.shields.io/badge/Asyncio-Fast-green?style=flat-square">
+</p>
 </p>
 
 ---
@@ -27,18 +31,18 @@
 
 ## 📂 Hasil Proxy Siap Pakai
 
-| Jenis          | Link                                                                               |
-| -------------- | ---------------------------------------------------------------------------------- |
-| 📦 Semua Proxy | [all.txt](https://github.com/aesneverhere/proxyhub/blob/main/output/all.txt)       |
-| 🔹 HTTP Only   | [http.txt](https://github.com/aesneverhere/proxyhub/blob/main/output/http.txt)     |
-| 🔸 SOCKS4      | [socks4.txt](https://github.com/aesneverhere/proxyhub/blob/main/output/socks4.txt) |
-| 🔸 SOCKS5      | [socks5.txt](https://github.com/aesneverhere/proxyhub/blob/main/output/socks5.txt) |
+| Jenis          | Link                                                                                                    |
+| -------------- | ------------------------------------------------------------------------------------------------------- |
+| 📦 Semua Proxy | [all.txt](https://raw.githubusercontent.com/aesneverhere/proxyhub/refs/heads/main/output/all.txt)       |
+| 🔹 HTTP Only   | [http.txt](https://raw.githubusercontent.com/aesneverhere/proxyhub/refs/heads/main/output/http.txt)     |
+| 🔸 SOCKS4      | [socks4.txt](https://raw.githubusercontent.com/aesneverhere/proxyhub/refs/heads/main/output/socks4.txt) |
+| 🔸 SOCKS5      | [socks5.txt](https://raw.githubusercontent.com/aesneverhere/proxyhub/refs/heads/main/output/socks5.txt) |
 
 <p align="center">
-  <a href="https://github.com/aesneverhere/proxyhub/blob/main/output/all.txt"><img src="https://img.shields.io/badge/📦 Semua-blue?style=for-the-badge"></a>
-  <a href="https://github.com/aesneverhere/proxyhub/blob/main/output/http.txt"><img src="https://img.shields.io/badge/🔹 HTTP-orange?style=for-the-badge"></a>
-  <a href="https://github.com/aesneverhere/proxyhub/blob/main/output/socks4.txt"><img src="https://img.shields.io/badge/🔸 SOCKS4-yellow?style=for-the-badge"></a>
-  <a href="https://github.com/aesneverhere/proxyhub/blob/main/output/socks5.txt"><img src="https://img.shields.io/badge/🔸 SOCKS5-lightgrey?style=for-the-badge"></a>
+  <a href="https://raw.githubusercontent.com/aesneverhere/proxyhub/refs/heads/main/output/all.txt"><img src="https://img.shields.io/badge/📦 Semua-blue?style=for-the-badge"></a>
+  <a href="https://raw.githubusercontent.com/aesneverhere/proxyhub/refs/heads/main/output/http.txt"><img src="https://img.shields.io/badge/🔹 HTTP-orange?style=for-the-badge"></a>
+  <a href="https://raw.githubusercontent.com/aesneverhere/proxyhub/refs/heads/main/output/socks4.txt"><img src="https://img.shields.io/badge/🔸 SOCKS4-yellow?style=for-the-badge"></a>
+  <a href="https://raw.githubusercontent.com/aesneverhere/proxyhub/refs/heads/main/output/socks5.txt"><img src="https://img.shields.io/badge/🔸 SOCKS5-lightgrey?style=for-the-badge"></a>
 </p>
 
 ---
@@ -46,10 +50,12 @@
 ## 📊 Statistik Realtime
 
 <!-- PROXY_STATS_START -->
+
 🔹 HTTP: 41205
 🔸 SOCKS4: 2862
 🔸 SOCKS5: 48
 📦 Total: 44115
+
 <!-- PROXY_STATS_END -->
 
 ---
