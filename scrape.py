@@ -21,33 +21,33 @@ OUTPUT_DIR = "output"
 def fetch_proxies():
     all_proxies = {"http": [], "socks4": [], "socks5": []}
     for proto, urls in SOURCES.items():
+        print(f"\n🔎 Fetching {proto.upper()} proxies...")
         for url in urls:
             try:
-                print(f"📥 Fetching {proto.upper()} from {url}")
                 res = requests.get(url, timeout=10)
                 res.raise_for_status()
-                proxies = [line.strip() for line in res.text.splitlines() if line.strip()]
-                all_proxies[proto].extend(proxies)
-                print(f"✅ {len(proxies)} proxies fetched.")
+                lines = [line.strip() for line in res.text.splitlines() if ":" in line]
+                all_proxies[proto].extend(lines)
+                print(f"  ✅ {len(lines)} proxies from {url}")
             except Exception as e:
-                print(f"⚠️ Failed to fetch from {url}: {e}")
+                print(f"  ⚠️  Failed to fetch from {url} → {e}")
     return all_proxies
 
 def save_proxies(proxies):
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-    with open(f"{OUTPUT_DIR}/http.txt", "w") as f:
-        f.write("\n".join(proxies["http"]))
-    with open(f"{OUTPUT_DIR}/socks4.txt", "w") as f:
-        f.write("\n".join(proxies["socks4"]))
-    with open(f"{OUTPUT_DIR}/socks5.txt", "w") as f:
-        f.write("\n".join(proxies["socks5"]))
+    def write_file(name, data):
+        path = os.path.join(OUTPUT_DIR, name)
+        with open(path, "w") as f:
+            f.write("\n".join(sorted(set(data))))
+        print(f"💾 Saved {len(data)} → {path}")
 
-    with open(f"{OUTPUT_DIR}/all.txt", "w") as f:
-        combined = proxies["http"] + proxies["socks4"] + proxies["socks5"]
-        f.write("\n".join(combined))
+    write_file("http.txt", proxies["http"])
+    write_file("socks4.txt", proxies["socks4"])
+    write_file("socks5.txt", proxies["socks5"])
+    write_file("all.txt", proxies["http"] + proxies["socks4"] + proxies["socks5"])
 
-    print("📦 [DONE] Proxies saved to output folder.")
+    print("\n✅ All proxies saved successfully.")
 
 if __name__ == "__main__":
     proxies = fetch_proxies()
