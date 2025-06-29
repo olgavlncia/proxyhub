@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img alt="Last Update" src="https://github.com/aesneverhere/ProxyHub/actions/workflows/proxy-update.yml/badge.svg">
+  <img alt="Last Update" src="https://github.com/notsecchoise/ProxyHub/actions/workflows/proxy-update.yml/badge.svg">
   <img alt="Python" src="https://img.shields.io/badge/Python-3.10+-blue?style=flat-square">
   <img alt="Flask" src="https://img.shields.io/badge/Flask-API-lightgrey?style=flat-square">
   <img alt="Asyncio" src="https://img.shields.io/badge/Asyncio-Fast-green?style=flat-square">
