@@ -33,16 +33,16 @@
 
 | Jenis          | Link                                                                                                    |
 | -------------- | ------------------------------------------------------------------------------------------------------- |
-| 📦 Semua Proxy | [all.txt](https://raw.githubusercontent.com/aesneverhere/proxyhub/refs/heads/main/output/all.txt)       |
-| 🔹 HTTP Only   | [http.txt](https://raw.githubusercontent.com/aesneverhere/proxyhub/refs/heads/main/output/http.txt)     |
-| 🔸 SOCKS4      | [socks4.txt](https://raw.githubusercontent.com/aesneverhere/proxyhub/refs/heads/main/output/socks4.txt) |
-| 🔸 SOCKS5      | [socks5.txt](https://raw.githubusercontent.com/aesneverhere/proxyhub/refs/heads/main/output/socks5.txt) |
+| 📦 Semua Proxy | [all.txt](https://raw.githubusercontent.com/notsecchoise/proxyhub/refs/heads/main/output/all.txt)       |
+| 🔹 HTTP Only   | [http.txt](https://raw.githubusercontent.com/notsecchoise/proxyhub/refs/heads/main/output/http.txt)     |
+| 🔸 SOCKS4      | [socks4.txt](https://raw.githubusercontent.com/notsecchoise/proxyhub/refs/heads/main/output/socks4.txt) |
+| 🔸 SOCKS5      | [socks5.txt](https://raw.githubusercontent.com/notsecchoise/proxyhub/refs/heads/main/output/socks5.txt) |
 
 <p align="center">
-  <a href="https://raw.githubusercontent.com/aesneverhere/proxyhub/refs/heads/main/output/all.txt"><img src="https://img.shields.io/badge/📦 Semua-blue?style=for-the-badge"></a>
-  <a href="https://raw.githubusercontent.com/aesneverhere/proxyhub/refs/heads/main/output/http.txt"><img src="https://img.shields.io/badge/🔹 HTTP-orange?style=for-the-badge"></a>
-  <a href="https://raw.githubusercontent.com/aesneverhere/proxyhub/refs/heads/main/output/socks4.txt"><img src="https://img.shields.io/badge/🔸 SOCKS4-yellow?style=for-the-badge"></a>
-  <a href="https://raw.githubusercontent.com/aesneverhere/proxyhub/refs/heads/main/output/socks5.txt"><img src="https://img.shields.io/badge/🔸 SOCKS5-lightgrey?style=for-the-badge"></a>
+  <a href="https://raw.githubusercontent.com/notsecchoise/proxyhub/refs/heads/main/output/all.txt"><img src="https://img.shields.io/badge/📦 Semua-blue?style=for-the-badge"></a>
+  <a href="https://raw.githubusercontent.com/notsecchoise/proxyhub/refs/heads/main/output/http.txt"><img src="https://img.shields.io/badge/🔹 HTTP-orange?style=for-the-badge"></a>
+  <a href="https://raw.githubusercontent.com/notsecchoise/proxyhub/refs/heads/main/output/socks4.txt"><img src="https://img.shields.io/badge/🔸 SOCKS4-yellow?style=for-the-badge"></a>
+  <a href="https://raw.githubusercontent.com/notsecchoise/proxyhub/refs/heads/main/output/socks5.txt"><img src="https://img.shields.io/badge/🔸 SOCKS5-lightgrey?style=for-the-badge"></a>
 </p>
 
 ---
@@ -63,7 +63,7 @@
 
 ```bash
 # Clone repo
-$ git clone https://github.com/aesneverhere/ProxyHub && cd ProxyHub
+$ git clone https://github.com/notsecchoise/ProxyHub && cd ProxyHub
 
 # Install depedensi
 $ pip install -r requirements.txt
@@ -95,5 +95,5 @@ $ python flask_app.py
 ---
 
 <p align="center">
-  🐱 Built with ❤️ by <a href="https://github.com/aesneverhere">@aesneverhere</a>
+  🐱 Built with ❤️ by <a href="https://github.com/notsecchoise">@notsecchoise</a>
 </p>
