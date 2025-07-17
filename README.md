@@ -54,7 +54,7 @@
 🔸 SOCKS4: 4127
 🔸 SOCKS5: 2390
 📦 Total: 46637
-🕓 Last Updated: 2025-07-17 14:46 WIB
+🕓 Last Updated: 2025-07-17 14:52 WIB
 <!-- PROXY_STATS_END -->
 
 ---
