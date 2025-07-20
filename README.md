@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img alt="Last Update" src="https://github.com/notsecchoise/ProxyHub/actions/workflows/proxy-update.yml/badge.svg">
+  <img alt="Last Update" src="https://github.com/olgavlncia/ProxyHub/actions/workflows/proxy-update.yml/badge.svg">
   <img alt="Python" src="https://img.shields.io/badge/Python-3.10+-blue?style=flat-square">
   <img alt="Flask" src="https://img.shields.io/badge/Flask-API-lightgrey?style=flat-square">
   <img alt="Asyncio" src="https://img.shields.io/badge/Asyncio-Fast-green?style=flat-square">
@@ -33,16 +33,16 @@
 
 | Jenis          | Link                                                                                                    |
 | -------------- | ------------------------------------------------------------------------------------------------------- |
-| 📦 Semua Proxy | [all.txt](https://raw.githubusercontent.com/notsecchoise/proxyhub/refs/heads/main/output/all.txt)       |
-| 🔹 HTTP Only   | [http.txt](https://raw.githubusercontent.com/notsecchoise/proxyhub/refs/heads/main/output/http.txt)     |
-| 🔸 SOCKS4      | [socks4.txt](https://raw.githubusercontent.com/notsecchoise/proxyhub/refs/heads/main/output/socks4.txt) |
-| 🔸 SOCKS5      | [socks5.txt](https://raw.githubusercontent.com/notsecchoise/proxyhub/refs/heads/main/output/socks5.txt) |
+| 📦 Semua Proxy | [all.txt](https://raw.githubusercontent.com/olgavlncia/proxyhub/refs/heads/main/output/all.txt)       |
+| 🔹 HTTP Only   | [http.txt](https://raw.githubusercontent.com/olgavlncia/proxyhub/refs/heads/main/output/http.txt)     |
+| 🔸 SOCKS4      | [socks4.txt](https://raw.githubusercontent.com/olgavlncia/proxyhub/refs/heads/main/output/socks4.txt) |
+| 🔸 SOCKS5      | [socks5.txt](https://raw.githubusercontent.com/olgavlncia/proxyhub/refs/heads/main/output/socks5.txt) |
 
 <p align="center">
-  <a href="https://raw.githubusercontent.com/notsecchoise/proxyhub/refs/heads/main/output/all.txt"><img src="https://img.shields.io/badge/📦 Semua-blue?style=for-the-badge"></a>
-  <a href="https://raw.githubusercontent.com/notsecchoise/proxyhub/refs/heads/main/output/http.txt"><img src="https://img.shields.io/badge/🔹 HTTP-orange?style=for-the-badge"></a>
-  <a href="https://raw.githubusercontent.com/notsecchoise/proxyhub/refs/heads/main/output/socks4.txt"><img src="https://img.shields.io/badge/🔸 SOCKS4-yellow?style=for-the-badge"></a>
-  <a href="https://raw.githubusercontent.com/notsecchoise/proxyhub/refs/heads/main/output/socks5.txt"><img src="https://img.shields.io/badge/🔸 SOCKS5-lightgrey?style=for-the-badge"></a>
+  <a href="https://raw.githubusercontent.com/olgavlncia/proxyhub/refs/heads/main/output/all.txt"><img src="https://img.shields.io/badge/📦 Semua-blue?style=for-the-badge"></a>
+  <a href="https://raw.githubusercontent.com/olgavlncia/proxyhub/refs/heads/main/output/http.txt"><img src="https://img.shields.io/badge/🔹 HTTP-orange?style=for-the-badge"></a>
+  <a href="https://raw.githubusercontent.com/olgavlncia/proxyhub/refs/heads/main/output/socks4.txt"><img src="https://img.shields.io/badge/🔸 SOCKS4-yellow?style=for-the-badge"></a>
+  <a href="https://raw.githubusercontent.com/olgavlncia/proxyhub/refs/heads/main/output/socks5.txt"><img src="https://img.shields.io/badge/🔸 SOCKS5-lightgrey?style=for-the-badge"></a>
 </p>
 
 ---
@@ -63,7 +63,7 @@
 
 ```bash
 # Clone repo
-$ git clone https://github.com/notsecchoise/ProxyHub && cd ProxyHub
+$ git clone https://github.com/olgavlncia/ProxyHub && cd ProxyHub
 
 # Install depedensi
 $ pip install -r requirements.txt
@@ -95,5 +95,5 @@ $ python flask_app.py
 ---
 
 <p align="center">
-  🐱 Built with ❤️ by <a href="https://github.com/notsecchoise">@notsecchoise</a>
+  🐱 Built with ❤️ by <a href="https://github.com/olgavlncia">@olgavlncia</a>
 </p>
