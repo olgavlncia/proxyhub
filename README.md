@@ -51,10 +51,10 @@
 
 <!-- PROXY_STATS_START -->
 🔹 HTTP: 39649
-🔸 SOCKS4: 4125
+🔸 SOCKS4: 4108
 🔸 SOCKS5: 2452
-📦 Total: 46226
-🕓 Last Updated: 2025-07-23 21:58 WIB
+📦 Total: 46209
+🕓 Last Updated: 2025-07-23 22:19 WIB
 <!-- PROXY_STATS_END -->
 
 ---
