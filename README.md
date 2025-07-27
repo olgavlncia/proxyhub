@@ -50,11 +50,11 @@
 ## 📊 Statistik Realtime
 
 <!-- PROXY_STATS_START -->
-🔹 HTTP: 39421
-🔸 SOCKS4: 3574
+🔹 HTTP: 39225
+🔸 SOCKS4: 3577
 🔸 SOCKS5: 1865
-📦 Total: 44860
-🕓 Last Updated: 2025-07-27 13:15 WIB
+📦 Total: 44667
+🕓 Last Updated: 2025-07-27 13:46 WIB
 <!-- PROXY_STATS_END -->
 
 ---
